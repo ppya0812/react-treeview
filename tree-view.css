@@ -1,0 +1,55 @@
+/* the tree node's style */
+.tree-view {
+  overflow-y: hidden;
+}
+
+.tree-view_item {
+  /* immediate child of .tree-view, for styling convenience */
+}
+
+/* style for the children nodes container */
+.tree-view_children {
+  margin-left: 16px;
+}
+
+.tree-view_children-collapsed {
+  height: 0px;
+  transition: height .5s ease;
+}
+
+.tree-view_arrow {
+  cursor: pointer;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  width: 12px;
+  height: 14px;
+}
+
+.tree-view_arrow:after {
+  content: '';
+  border: 4px solid transparent;
+  border-top: 8px solid #9e9e9e;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+/* rotate the triangle to close it */
+.tree-view_arrow-collapsed:after {
+  border: 4px solid transparent;
+  border-left: 8px solid #9e9e9e;
+}
+
+.node {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 6px;
+  color: #6aa5a4;
+}
+
